@@ -32,8 +32,6 @@ namespace ChurchDataShow.Windows
         public void ExibirTexto(string Texto, ConfiguracaoTexto configuracaoTexto)
         {
             tbTextos.Text = Texto;
-
-
         }
 
         public void MudarCorTexto(Brush Color)
@@ -49,6 +47,11 @@ namespace ChurchDataShow.Windows
         public void MudarNegrito(bool Negrito)
         {
             tbTextos.FontWeight = Negrito ? FontWeights.Bold : FontWeights.Normal;
+        }
+
+        public void MudarTamanhoFonte(int Tamanho)
+        {
+            tbTextos.FontSize = Tamanho;
         }
 
         public void OcultarTexto()

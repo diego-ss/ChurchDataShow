@@ -54,9 +54,16 @@
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Margin="0,8,0,0">
-                <Label Style="{StaticResource MontserratBold}">Negrito:</Label>
-                <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" Checked="MudarNegrito" Unchecked="MudarNegrito"></ToggleButton>
+            <StackPanel HorizontalAlignment="Center" Margin="0,8,0,0" Orientation="Horizontal">
+                <StackPanel VerticalAlignment="Center">
+                    <Label Style="{StaticResource MontserratBold}">Negrito:</Label>
+                    <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" Checked="MudarNegrito" Unchecked="MudarNegrito"
+                                  ></ToggleButton>
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                    <Label Style="{StaticResource MontserratBold}">Tamanho:</Label>
+                    <TextBox HorizontalContentAlignment="Center" FontFamily="MontserratLight" FontSize="13" PreviewTextInput="ApenasNumeros" LostFocus="MudarTamanhoFonte" x:Name="tbTamanho">50</TextBox>
+                </StackPanel>
             </StackPanel>
 
         </StackPanel>

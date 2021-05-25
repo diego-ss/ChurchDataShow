@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -65,6 +66,21 @@ namespace ChurchDataShow.Views.TemplateViews
         private void MudarNegrito(object sender, RoutedEventArgs e)
         {
             DataShowScreen.GetInstance().MudarNegrito((sender as ToggleButton).IsChecked.Value);
+        }
+
+        private void ApenasNumeros(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void MudarTamanhoFonte(object sender, RoutedEventArgs e)
+        {
+            if (tbTamanho.Text == "")
+                tbTamanho.Text = "50";
+
+            var tamanho = int.Parse(tbTamanho.Text);
+            DataShowScreen.GetInstance().MudarTamanhoFonte(tamanho);
         }
     }
 }

@@ -154,10 +154,10 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
                                     <materialDesign:PackIcon VerticalAlignment="Center" Foreground="CornflowerBlue" Kind="Bible" Width="20" Height="20"></materialDesign:PackIcon>
-                                    <Label VerticalAlignment="Center" Margin="5,0,0,0" Content="{Binding Path=Livro.Nome}" FontSize="11"></Label>
-                                    <Label VerticalAlignment="Center"  Content="{Binding Path=TextoBiblia.Capitulo}" FontSize="11"></Label>
-                                    <Label Margin="-6,0,0,0" VerticalAlignment="Center"  FontSize="11">:</Label>
-                                    <Label Margin="-6,0,0,0" VerticalAlignment="Center" Content="{Binding Path=TextoBiblia.Versiculo}" FontSize="11"></Label>
+                                    <Label VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold" Content="{Binding Path=Livro.Nome}" FontSize="11"></Label>
+                                    <Label Margin="-4,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Content="{Binding Path=TextoBiblia.Capitulo}" FontSize="11"></Label>
+                                    <Label Margin="-6,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="11">:</Label>
+                                    <Label Margin="-6,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Content="{Binding Path=TextoBiblia.Versiculo}" FontSize="11"></Label>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
