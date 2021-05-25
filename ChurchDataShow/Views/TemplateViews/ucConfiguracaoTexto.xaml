@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="ChurchDataShow.Views.TemplateViews.ucConfiguracaoTexto"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChurchDataShow.Views.TemplateViews"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5">
+    <Grid>
+        <StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Width="190">
+                <Label Style="{StaticResource MontserratBold}" HorizontalAlignment="Left">Cor do texto:</Label>
+
+                <StackPanel Margin="0,3,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="White" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="Black" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="Gray" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="Red" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="Orange" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="LightCoral" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="LightPink" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="Yellow" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="LightGreen" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="Blue" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="CornflowerBlue" Click="MudarCor"></Button>
+                    <Button Margin="3,0,0,0" Width="12" Height="12" BorderBrush="Black" BorderThickness="1" Background="BlueViolet" Click="MudarCor"></Button>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Width="190">
+                <Label Style="{StaticResource MontserratBold}" HorizontalAlignment="Left">Fonte:</Label>
+                <ComboBox FontFamily="MontserratLight" MaxWidth="300" Margin="5,0,5,0"></ComboBox>
+            </StackPanel>
+
+            <StackPanel Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Style="{StaticResource MontserratBold}" >Alinhamento:</Label>
+                <StackPanel Margin="2,5,2,0" Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <!-- the following based on https://material.io/guidelines/components/buttons.html#buttons-toggle-buttons -->
+                    <ListBox
+                    Style="{StaticResource MaterialDesignToolToggleListBox}"
+                    SelectedIndex="0">
+                        <ListBox.ToolTip>
+                            <StackPanel>
+                                <TextBlock Text="alinhamento do texto na tela de projeção"/>
+                            </StackPanel>
+                        </ListBox.ToolTip>
+                        <ListBoxItem Content="{materialDesign:PackIcon Kind=FormatAlignLeft, Size=20}" Selected="MudarAlinhamento" x:Name="AlignLeft"/>
+                        <ListBoxItem Content="{materialDesign:PackIcon Kind=FormatAlignCenter, Size=20}" Selected="MudarAlinhamento" x:Name="AlignCenter"/>
+                        <ListBoxItem Content="{materialDesign:PackIcon Kind=FormatAlignRight, Size=20}" Selected="MudarAlinhamento" x:Name="AlignRight"/>
+                        <ListBoxItem Content="{materialDesign:PackIcon Kind=FormatAlignJustify, Size=20}" Selected="MudarAlinhamento" x:Name="AlignJustify"/>
+                    </ListBox>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Margin="0,8,0,0">
+                <Label Style="{StaticResource MontserratBold}">Negrito:</Label>
+                <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" Checked="MudarNegrito" Unchecked="MudarNegrito"></ToggleButton>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
